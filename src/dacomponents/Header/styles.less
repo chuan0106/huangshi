@@ -1,0 +1,102 @@
+@import '~@/utils/theme/theme.less';
+.normal {
+  position: relative;
+  height: 54px;
+  width: 100%;
+  // box-shadow: 0 2px 6px #eee;
+  color: white;
+  background: @header-background-color;
+}
+
+.logo {
+  float: left;
+  margin-top: 6px;
+  margin-left: 20px;
+  width: 111px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  img {
+    width: 111px;
+    height: 40px;
+  }
+}
+.projectName {
+  line-height: 54px;
+  padding-left: 18px;
+}
+
+.page {
+  display: inline-block;
+  // float: left;
+  margin-top: 2px;
+  margin-left: 80px;
+
+  :global {
+    .ant-menu {
+      font-size: 15px;
+    }
+    .ant-menu-horizontal {
+      // line-height: 60px;
+      border-bottom-width: 0px;
+      background: @header-background-color;
+    }
+    .ant-menu-horizontal > .ant-menu-item:hover,
+    .ant-menu-horizontal > .ant-menu-submenu:hover,
+    .ant-menu-horizontal > .ant-menu-item-active,
+    .ant-menu-horizontal > .ant-menu-submenu-active,
+    .ant-menu-horizontal > .ant-menu-item-open,
+    .ant-menu-horizontal > .ant-menu-submenu-open,
+    .ant-menu-horizontal > .ant-menu-item-selected,
+    .ant-menu-horizontal > .ant-menu-submenu-selected {
+      border-bottom: 2px solid white;
+      color: white;
+    }
+
+    .ant-menu-item {
+      color: #909399;
+    }
+
+    .ant-menu-item,
+    .ant-menu-submenu-titleP {
+      padding: 0px;
+      margin: 0px 20px;
+    }
+  }
+}
+
+.user {
+  height: 100%;
+  position: absolute;
+  width: auto;
+  right: 0px;
+  top: 0px;
+  .userName {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .loginout {
+    float: left;
+    position: relative;
+    height: 100%;
+    .versions {
+      cursor: pointer;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 18px;
+      margin-right: 20px;
+      text-align: center;
+      background: #ffe156;
+      border-radius: 9px;
+      font-size: 11px;
+      font-weight: 400;
+      color: #473409;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.normalShow {
+  position: fixed;
+  right: 0px;
+  height: 100%;
+  width: 300px;
+  z-index: 9999;
+}
+.normalHidden {
+  position: fixed;
+  right: -300px;
+  height: 100%;
+  width: 300px;
+  z-index: 9999;
+}
+.buttonView {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  background: #1890ff;
+  left: -48px;
+  top: 200px;
+  z-index: 9999;
+  cursor: pointer;
+  border-radius: 4px 0 0 4px;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 48px;
+  // margin: 0 auto;
+}
+.contentView {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  .name {
+    cursor: pointer;
+    height: 38px;
+    line-height: 38px;
+    text-indent: 12px;
+    &:hover {
+      background: #1890ff;
+      color: white;
+    }
+  }
+}
+
+.line {
+  height: 1px;
+  // background: gray;
+  width: 100%;
+  margin-top: 20px;
+}

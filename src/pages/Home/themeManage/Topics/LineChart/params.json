@@ -1,0 +1,73 @@
+{
+  "sourceId": "ce3382a0ae80407294b507a52a897cf4",
+  "sourceType": 7,
+  "dataset": "5b6b057a3d0e40f682351e31223d7254",
+  "dimension": [
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0002",
+      "index": 2,
+      "alias": "xz",
+      "anotherName": null,
+      "type": 0,
+      "key": "f0002",
+      "xyType": 1
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0003",
+      "index": 3,
+      "alias": "累计产值",
+      "anotherName": null,
+      "type": 1,
+      "key": "f0003",
+      "xyType": 2
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0004",
+      "index": 4,
+      "alias": "累计增速",
+      "anotherName": null,
+      "type": 1,
+      "key": "f0004",
+      "xyType": 3
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0005",
+      "index": 5,
+      "alias": "当月产值",
+      "anotherName": null,
+      "type": 1,
+      "key": "f0005",
+      "xyType": 2
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0009",
+      "index": 9,
+      "alias": "当月增速",
+      "anotherName": null,
+      "type": 1,
+      "key": "f0009",
+      "xyType": 3
+    }
+  ],
+  "where": {
+    "mode": 1,
+    "conditions": []
+  },
+  "group": [],
+  "order": [],
+  "sql": "",
+  "xDimension": [2],
+  "yDimension": [3, 5, 4, 9],
+  "y1Dimension": [4, 9],
+  "search_type": 2
+}

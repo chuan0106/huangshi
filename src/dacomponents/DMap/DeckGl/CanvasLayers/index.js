@@ -1,0 +1,9 @@
+export { default as Scatterplot } from './Scatterplot';
+export { default as Icon } from './Icon';
+export { default as Heartbeat } from './Heartbeat';
+export { default as Heatmap } from './Heatmap';
+export { default as Path } from './Path';
+export { default as GreatCircle } from './GreatCircle';
+export { default as Arc } from './Arc';
+export { default as SolidPolygon } from './SolidPolygon';
+export { default as Cluster } from './cluster';

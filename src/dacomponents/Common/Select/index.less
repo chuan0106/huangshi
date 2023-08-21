@@ -1,0 +1,62 @@
+.container {
+  width: 120px;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    left: 0px;
+    top: 34px;
+    width: 100%;
+    padding: 5px 0px;
+    background-color: inherit;
+    overflow-y: auto;
+  }
+
+  li {
+    list-style: none;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.selector {
+  position: relative;
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+
+  & > span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.select-arrow {
+  line-height: initial;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #00000040;
+
+  & > svg {
+    vertical-align: -2px;
+  }
+}
+
+.placeholder {
+  color: #bfbfbf;
+}

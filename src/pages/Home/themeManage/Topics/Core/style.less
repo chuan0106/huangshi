@@ -1,0 +1,172 @@
+.core {
+  position: absolute;
+  display: inline-block;
+  left: 954px;
+  top: 100px;
+  z-index: 999;
+
+  .title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 27px;
+    width: 195px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    background: url(@/assets/huangshi/quanjugailan/icon2.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 854px;
+  left: 967px;
+  width: 300px;
+  height: 205px;
+  z-index: 999;
+
+  .menuList {
+
+    span {
+      font-size: 20px;
+      color: #fff;
+      margin-left: 10px;
+      letter-spacing: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.tableWarp {
+  position: absolute;
+  left: 1260px;
+  top: 865px;
+  //   top: 565px;
+  width: 1270px;
+  height: 194px;
+  z-index: 999;
+
+  .titleWarp {
+    position: relative;
+
+    .title {
+      position: absolute;
+      left: 65px;
+      top: -57px;
+      color: #fff;
+      font-size: 22px;
+    }
+
+  }
+
+  :global {
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+      padding-right: 0px;
+    }
+
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border: 1px solid #55538b;
+      border-radius: 8px;
+
+      background: rgba(22, 55, 105, 0.5);
+
+    }
+  }
+
+  .ranking {
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .tabSelectRight {
+    right: 0 !important;
+  }
+
+  .tabSelectLeft,
+  .tabSelectRight {
+    position: absolute;
+    right: 132px;
+    top: -45px;
+
+    :global {
+      .ant-select-dropdown {
+        position: relative;
+        left: 0 !important;
+        top: 32px !important;
+      }
+
+      .ant-select-dropdown {
+        height: 120px;
+        overflow: auto;
+      }
+
+      .ant-select-item {
+        position: relative;
+        display: block;
+        min-height: 10px;
+        // padding: 5px 12px;
+        color: white;
+        font-weight: normal;
+        font-size: 8px !important;
+        line-height: 10px;
+        cursor: pointer;
+        background-color: black;
+        // transition: background 0.3s ease;
+      }
+
+      .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+        background-color: black;
+        color: white;
+      }
+
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: black;
+        color: white;
+      }
+
+      // .rc-virtual-list-holder-inner{
+      //   width: 50px;
+      // }
+    }
+  }
+}
+
+.mapimg {
+  position: absolute;
+  left: 855px;
+  top: -102px;
+  width: 1948px;
+  height: 1146px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mapimgtwo {
+  position: absolute;
+  left: 1182px;
+  top: 130px;
+  width: 1241px;
+  height: 690px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
