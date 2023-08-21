@@ -1,0 +1,74 @@
+@import '~@/utils/theme/theme.less';
+@import './styles.css';
+.normal {
+  display: inline-block;
+  width: 200px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  transform: scale(1);
+  cursor: pointer;
+  text-align: left;
+  font-family: Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC,
+    Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.normalNoHover {
+  display: inline-block;
+  width: 200px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  transform: scale(1);
+  cursor: pointer;
+  text-align: left;
+  font-family: Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC,
+    Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+  border-radius: 2px;
+}
+.normal:hover {
+  transform: scale(1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.body {
+  width: 100%;
+  height: 100%;
+}
+.img {
+  width: 100%;
+  height: auto;
+}
+.imgCover {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  padding: 16px 16px;
+}
+.contentCover {
+  padding: 16px 16px;
+  position: absolute;
+  height: 120px;
+  bottom: 0px;
+}
+.title {
+  display: inline-block;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.85);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+}
+.description {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: SourceHanSansSCLight;
+}

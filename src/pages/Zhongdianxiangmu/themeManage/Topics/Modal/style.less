@@ -1,0 +1,228 @@
+.core {
+  position: relative;
+  left: 2680px;
+  top: 200px;
+  width: 500px;
+  height: 700px;
+  cursor: zoom-out;
+  padding: 0 25px;
+  z-index: 9999999999;
+  //   background: #fff;
+}
+
+.cardWarp {
+  //   margin-top: 35px;
+  width: 100%;
+  height: calc(~'100% - 70px') !important;
+  // border: 5px solid rgba(38, 124, 219, .7);
+  //   color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: 'tnum', "tnum";
+  position: relative;
+  //   background: #fff;
+  border-radius: 2px;
+  // background: rgba(0, 0, 0, 0.45);
+
+
+  .cardHead {
+    min-height: 48px;
+    margin-bottom: -1px;
+    padding: 0 24px;
+    color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    background: transparent;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0;
+
+
+    .cardHeadWrapper {
+      display: flex;
+      align-items: center;
+
+      .cardHeadTitle {
+        margin-bottom: 20px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* flex: 1 1; */
+        padding: 8px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 12px;
+
+        p {
+          display: flex;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 0;
+          align-items: center;
+
+          // width: 341px;
+          // height: 36px;
+          // font-size: 24px;
+          // background: linear-gradient(90deg, rgba(42, 77, 131, 0) 0%, #2A5697 51%, rgba(39, 75, 126, 0) 100%);
+          &::before {
+            position: absolute;
+            content: '';
+            //   width: 100%;
+            width: 200%;
+            left: -50%;
+            height: 50px;
+            background: linear-gradient(90deg, rgba(42, 77, 131, 0) 0%, #2A5697 51%, rgba(39, 75, 126, 0) 100%);
+            z-index: -1;
+          }
+
+        }
+      }
+
+      .cardExtra {
+        float: right;
+        margin-left: auto;
+        padding: 16px 0;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: normal;
+        font-size: 14px;
+
+        a {
+          color: #1890ff;
+          text-decoration: none;
+          background-color: transparent;
+          outline: none;
+          cursor: pointer;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #40a9ff;
+          }
+        }
+      }
+    }
+  }
+
+  // 内容
+  .itemList:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .cardCore {
+    padding: 24px 40px 0 40px;
+    color: #fff;
+    font-size: 24px;
+    height: 545px;
+    overflow: auto;
+
+    //   padding: 0 20px;
+
+
+    // flex
+    .itemList {
+      display: flex;
+      // align-items: center;
+      margin-bottom: 20px;
+
+
+
+      // 分一份
+      .designation {
+        flex: 1;
+
+        p {
+          text-align: center;
+          width: 150px;
+          height: 33px;
+          // line-height: 33px;
+          background: linear-gradient(264deg, rgba(17, 58, 160, 0.0627) 0%, rgba(41, 102, 255, 0.6000) 100%);
+        }
+      }
+
+      // 剩下都是你的
+      .value {
+        text-indent: 20px;
+        text-align: left;
+        flex: 9;
+      }
+    }
+  }
+}
+
+
+
+.fadeIn {
+  animation: fadeIn .5s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.4) translateY(-2px) translate(3px);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+.close {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.titleBox {
+  background: url('http://58.19.254.210:7000/dataeye/v1/data/image/get?imageid=63f477a3b5b1ce707071cbef')no-repeat 100% 100%;
+  background-size: cover;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 80px;
+}
+
+.compDetails {
+  width: 100%;
+  height: calc(100% -50px);
+
+  div:nth-child(even) {
+    background: rgba(59, 111, 233, 0.2);
+  }
+}
+
+.compSon {
+  min-height: 45px;
+  line-height: 45px;
+  padding: 0 10px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

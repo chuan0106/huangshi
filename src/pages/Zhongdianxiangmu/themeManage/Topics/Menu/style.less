@@ -1,0 +1,239 @@
+.menu {
+  position: absolute;
+  left: 15px;
+  top: 140px;
+  width: 535px;
+  height: 920px;
+  z-index: 99;
+
+  :global {
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+      padding-right: 0px;
+    }
+
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border: 1px solid #55538b;
+      border-radius: 8px;
+
+      background: rgba(22, 55, 105, 0.5);
+
+    }
+
+    .ant-select-dropdown {
+      position: relative;
+      left: 0 !important;
+      top: 32px !important;
+    }
+
+    .ant-select-item {
+      position: relative;
+      display: block;
+      min-height: 10px;
+      // padding: 5px 12px;
+      color: white;
+      font-weight: normal;
+      font-size: 8px !important;
+      line-height: 10px;
+      cursor: pointer;
+      background-color: black;
+      // transition: background 0.3s ease;
+    }
+
+    .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+      background-color: black;
+      color: white;
+    }
+
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      background-color: black;
+      color: white;
+    }
+
+    // .rc-virtual-list-holder-inner{
+    //   width: 50px;
+    // }
+  }
+
+  .head {
+    position: relative;
+    width: 390px;
+    height: 40px;
+    // 图片有黑底 暂时注释
+    // background: url(@/assets/huangshi/zhongdianxiangmu/biaogetitle.png) no-repeat center center;
+    background-size: 100% 100%;
+
+    .title {
+      letter-spacing: 1px;
+      position: absolute;
+      left: 73px;
+      top: 3px;
+      color: #fff;
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .select {
+      position: absolute;
+      right: -10px;
+      top: 4px;
+    }
+  }
+
+  .core {
+    width: 532px;
+    height: 830px;
+    border: 1px solid rgb(18, 65, 127);
+    margin-top: 8px;
+    border-radius: 1px 1px 1px 1px;
+    padding: 8px 12px 12px 12px;
+    overflow: auto;
+
+
+
+    .itemBox {
+      margin-bottom: 40px;
+    }
+
+    .itemWarp {
+
+      // 3.17更新布局
+      .pWarp {
+
+        padding: 20px 0px;
+        background: url(@/assets/huangshi/zhongdianxiangmu/bg2.png) no-repeat left bottom;
+        background-size: 60% 100%;
+
+        &::before {
+          background-color: rgba(27, 69, 122);
+        }
+      }
+
+      p {
+        // position: relative;
+        // height: 30px;
+
+        // &::before {
+        //   position: absolute;
+        //   content: '';
+        //   left: 0;
+        //   top: 0;
+        //   width: 100%;
+        //   height: 50px;
+        //   background: url(@/assets/huangshi/zhongdianxiangmu/bg2.png) no-repeat left top;
+        //   background-size: contain;
+        // }
+      }
+
+      color: #fff;
+
+
+      .title {
+        margin-left: 24px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        cursor: pointer;
+      }
+
+      .center {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        // 3.17更新布局
+        margin-top: 23px;
+
+
+        .box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 119px;
+          height: 72px;
+          background: rgba(22, 49, 103, .3);
+          cursor: pointer;
+          background: url(@/assets/huangshi/zhongdianchanye/2.png) no-repeat center center;
+
+          .value {
+            color: #fff;
+            font-weight: 600;
+            font-size: 24px;
+
+            .unit {
+              font-size: 14px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .ContentTop {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 390px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 16px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 16px;
+
+    span {
+      flex: 1;
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .TopTitle {
+    color: rgb(139, 168, 200);
+    width: 148px;
+    height: 35px;
+    border-radius: 17px;
+    text-align: center;
+
+    background-color: rgb(42, 75, 129);
+  }
+
+  .CurrentTopTitle {
+    color: #fff;
+    text-align: center;
+    background-color: rgb(31, 86, 149);
+  }
+
+  :global {
+
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+      padding-right: 0;
+    }
+
+    .ant-select-selection--single {
+      background-color: #121c2a;
+      color: rgb(88, 182, 283);
+      border: 1px solid #0094ff;
+    }
+
+    .ant-select-arrow {
+      color: rgb(88, 182, 283);
+    }
+
+    .ant-select-dropdown-menu-item {
+      color: #6d6d6d;
+    }
+
+    .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+      background-color: rgba(23, 38, 66, 0.65);
+      color: #00c6ff;
+    }
+
+    .ant-select-dropdown-menu-item-selected {
+      color: #00c6ff;
+      background-color: rgba(23, 38, 66, 0.65);
+    }
+  }
+}

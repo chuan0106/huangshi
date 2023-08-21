@@ -1,0 +1,35 @@
+//相对loading  区域使用较多
+.normal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0);
+  // background: orange;
+}
+//绝对loading
+.normal1 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0);
+  // background: orange;
+}
+.load {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  z-index: 9999;
+  color: black;
+  width: 70px;
+  height: 70px;
+  background-image: url('@/assets/common/load/loading.gif');
+  background-size: cover;
+}

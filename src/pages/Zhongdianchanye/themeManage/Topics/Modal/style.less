@@ -1,0 +1,220 @@
+// 弹出框
+.modal {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 205px;
+  width: 1020px;
+  height: 580px;
+  background-color: rgba(1, 3, 11, .7);
+  padding: 20px;
+  border: 5px solid rgb(22, 48, 114);
+  box-shadow: 4px 4px 15px rgba(22, 48, 114, );
+  z-index: 99;
+
+  .close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: -10px;
+      top: 7px;
+      height: 20px;
+      width: 4px;
+      background-color: #027fea;
+    }
+  }
+
+  .title {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .list {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 30px;
+    color: rgb(174, 175, 178);
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .liActive {
+    color: #fff;
+    background-color: rgb(12, 33, 79);
+  }
+
+  .messageBox {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .left {
+      width: 50%;
+    }
+
+    .right {
+      width: 50%;
+    }
+
+    .item {
+      width: 100%;
+      height: 50px;
+      line-height: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1px;
+      border: 1px solid rgb(1, 3, 11);
+    }
+
+
+    // .left,
+    // .right {
+    //   display: inline-block;
+    //   position: relative;
+    //   width: 50%;
+
+    //   div {
+    //     display: inline-block;
+    //   }
+
+    .key {
+      text-align: center;
+      font-size: 16px;
+      height: 30px;
+      color: #fff;
+      width: 120px;
+      background-color: rgb(36, 78, 182);
+    }
+
+    .value {
+      max-height: 100px;
+      overflow: hidden;
+      overflow-y: auto;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 16px;
+      margin-left: 10px;
+      color: #fff;
+      width: calc(~'100% - 130px');
+    }
+
+    .lastBottom {
+      width: 100%;
+
+      .key {
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        width: 120px;
+        background-color: rgb(36, 78, 182);
+      }
+
+      .value {
+        font-size: 16px;
+        margin-left: 10px;
+        color: #fff;
+        width: calc(~'100% - 130px');
+      }
+
+      div {
+        display: inline-block;
+      }
+    }
+
+    // .right {
+    //   float: right;
+    // }
+  }
+
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .bar_item {
+      flex: 1;
+      border-right: 1px solid #fff;
+      background-color: rgb(36, 78, 182);
+      text-align: center;
+      font-size: 16px;
+      color: #fff;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+
+  .bar_center {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(99, 102, 109);
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn .8s both;
+}
+
+.fadeEnd {
+  animation: fadeEnd .8s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.4) translateY(-2px) translate(3px);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeEnd {
+
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
