@@ -144,7 +144,7 @@ const geoJson = {
                 "name": "开发区·铁山区",
                 "coordinates": [114.89687834986758, 30.198957203188776],
                 "number": "192.69",
-                "img": tieshanqu,
+                "img": tieshanqu1,
                 "width": 242,
                 "height": 101,
             }
@@ -157,7 +157,7 @@ const geoJson = {
                 "name": "开发区·铁山区",
                 "coordinates": [115.00997834986758, 30.122957203188776],
                 "number": "192.69",
-                "img": tieshanqu,
+                "img": tieshanqu1,
                 "width": 242,
                 "height": 101,
             }
@@ -202,8 +202,8 @@ const shiGeoJson = {
                 "coordinates": [115.24984881873824, 30.095248527327838],
                 "number": "192.69",
                 "img": gongyeyuanqu,
-                "width": 350,
-                "height": 97,
+                "width": 72,
+                "height": 49,
             }
         },
         {

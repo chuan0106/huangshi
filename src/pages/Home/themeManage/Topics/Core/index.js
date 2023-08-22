@@ -307,9 +307,7 @@ const Index = (props) => {
                         url: d.geometry.img,
                         width: d.geometry.width,
                         height: d.geometry.height,
-                        anchorX: (d.geometry.name === '开发区·铁山区'
-                            ? d.geometry.width * 0.9
-                            : d.geometry.width / 2),
+                        anchorX: d.geometry.width / 2,
                         anchorY: d.geometry.height,
                     };
                     return obj;
@@ -345,9 +343,7 @@ const Index = (props) => {
                         url: d.geometry.img,
                         width: d.geometry.width,
                         height: d.geometry.height,
-                        anchorX: (d.geometry.name === '开发区·铁山区'
-                            ? d.geometry.width * 0.9
-                            : d.geometry.width / 2),
+                        anchorX: d.geometry.width / 2,
                         anchorY: d.geometry.height,
                     };
                     return obj;

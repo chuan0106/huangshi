@@ -6,15 +6,12 @@ import params from './prmasr.json'
 import icon from '@/assets/huangshi/zhongdianxiangmu/icon.png'
 import { shiGeoJson } from '@/utils/publickPage/geoJson'
 const dispatch = window.g_app._store.dispatch;
-const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
-{
+const Index = ({ globalMapModel, menuName, mapHandler, projectName }) => {
     const [leary, setLeary] = useState(null)
 
     // 检测 projectName 改变 展示高亮点位
-    useEffect(() =>
-    {
-        if (projectName)
-        {
+    useEffect(() => {
+        if (projectName) {
             const newData = {
                 ...params, where: {
                     "mode": 1,
@@ -45,8 +42,7 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
     }, [projectName])
 
 
-    useEffect(() =>
-    {
+    useEffect(() => {
         const newData = {
             ...params, where: {
                 "mode": 1,
@@ -76,23 +72,19 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
     }, [menuName])
 
     // 每次点击 把之前的清除
-    useEffect(() =>
-    {
+    useEffect(() => {
         let { deckLayerArr, mapObj } = globalMapModel;
         let layerobj = new IconLayer({
             id: '市区-icon',
             data: shiGeoJson.features,
             pickable: true,
             billboard: true,
-            getIcon: d =>
-            {
+            getIcon: d => {
                 let obj = {
                     url: d.geometry.img,
                     width: d.geometry.width,
                     height: d.geometry.height,
-                    anchorX: (d.geometry.name === '开发区·铁山区'
-                        ? d.geometry.width * 0.9
-                        : d.geometry.width / 2),
+                    anchorX: d.geometry.width / 2,
                     anchorY: d.geometry.height,
                 };
                 return obj;
@@ -101,22 +93,19 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
             sizeMaxPixels: 150,
             getSize: d => 1,
             sizeUnits: 'meters',
-            getPosition: d =>
-            {
+            getPosition: d => {
                 return d.geometry.coordinates
             },
 
         })
-        if (mapObj)
-        {
+        if (mapObj) {
             dispatch({
                 type: 'globalMapModel/setDeckLayerArr',
                 // payload: [layerobj],
                 payload: [layerobj]
             })
         }
-        return () =>
-        {
+        return () => {
             dispatch({
                 type: 'globalMapModel/setDeckLayerArr',
                 payload: []
@@ -124,14 +113,12 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
         }
     }, [menuName])
 
-    const projectNameLayer = (geoJson) =>
-    {
+    const projectNameLayer = (geoJson) => {
         let layerObj = new IconLayer({
             id: `项目名称：${projectName}-icon`,
             data: geoJson.features,
             pickable: true,
-            getIcon: d =>
-            {
+            getIcon: d => {
                 return {
                     // url: 'https://www.dataojocloud.com/dataeye/v1/data/image/get?imageid=62eb5d7fb5b1ce25da65718d',
                     // width: 95,
@@ -147,13 +134,11 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
             getSize: d => 300,
             sizeScale: 0.1,
             getColor: [255, 255, 255, 10000], // 所有图标都是红色
-            getPosition: d =>
-            {
+            getPosition: d => {
                 console.log(d);
                 return d.geometry.coordinates;
             },
-            onClick: d =>
-            {
+            onClick: d => {
                 let { object } = d
 
                 mapHandler(object)
@@ -161,18 +146,15 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
         })
         setLeary(layerObj)
     }
-    const getData = (geoJson) =>
-    {
+    const getData = (geoJson) => {
         iconInfo(geoJson)
     }
-    const iconInfo = (geoJson) =>
-    {
+    const iconInfo = (geoJson) => {
         let layerObj = new IconLayer({
             id: '重点项目-icon',
             data: geoJson.features,
             pickable: true,
-            getIcon: d =>
-            {
+            getIcon: d => {
                 return {
                     url: icon,
                     width: 95,
@@ -184,13 +166,11 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
             sizeUnits: 'meters',
             getSize: d => 300,
             sizeScale: 0.1,
-            getPosition: d =>
-            {
+            getPosition: d => {
                 console.log(d);
                 return d.geometry.coordinates;
             },
-            onClick: d =>
-            {
+            onClick: d => {
                 let { object } = d
 
                 mapHandler(object)
@@ -199,13 +179,11 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
         setLeary(layerObj)
     }
     // 更新点位
-    useEffect(() =>
-    {
+    useEffect(() => {
         let { deckLayerArr, mapObj } = globalMapModel;
 
         console.log(deckLayerArr, 'deckLayerArrdeckLayerArr');
-        if (mapObj && leary !== null)
-        {
+        if (mapObj && leary !== null) {
             dispatch({
                 type: 'globalMapModel/setDeckLayerArr',
                 // 点击某个项目高亮 干掉所有高亮的 留下我自己
@@ -217,8 +195,7 @@ const Index = ({ globalMapModel, menuName, mapHandler, projectName }) =>
         <Fragment>  </Fragment>
     );
 };
-function mapStateToProps ({ globalMapModel })
-{
+function mapStateToProps ({ globalMapModel }) {
     return {
         globalMapModel: globalMapModel
     }
