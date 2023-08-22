@@ -2,8 +2,8 @@
  * @version: V1.0.0
  * @Author: dengtao
  * @Date: 2022-01-19 18:06:57
- * @LastEditors: dengtao
- * @LastEditTime: 2023-03-03 20:40:42
+ * @LastEditors: yuchang
+ * @LastEditTime: 2023-05-22 10:17:03
  * @FilePath: \cloud\src\utils\publickPage\index.js
  * @Descripttion: 
  */
@@ -74,24 +74,25 @@ const INITIAL_VIEW_STATE = {
 
 
     altitude: 1.5,
-    bearing: 2.045454545454543,
+    bearing: -13.071753421384551,
     height: 1080,
-    latitude: 29.92714490074301,
-    longitude: 115.0541734918883,
+    latitude: 29.813937905958735,
+    longitude: 114.99761789082964,
     maxPitch: 60,
-    maxZoom: 21,
+    maxZoom: 28,
     minPitch: 0,
     minZoom: 0,
-    pitch: 1.0387223297918269,
+    pitch: 42.19170172749507,
     width: 3520,
-    zoom: 9.106531408747953,
+    zoom: 10.018099209327202,
 
 };
 
 //地图的密钥
 const MAPBOX_TOKEN = 'pk.eyJ1Ijoid2VpemhpbWluMjAwNyIsImEiOiJjajkzeHRhcWkyaWtsMzNucmZkZHBsbWtsIn0.Roa71zaPUY1M00OQ0X1WzA';
 //地图样式
-const MAP_STYLE = mapstyle;
+// const MAP_STYLE = mapstyle;
+const MAP_STYLE = 'http://114.255.136.222:8800/styles/huangshi_blue/style.json?';
 
 export
 {

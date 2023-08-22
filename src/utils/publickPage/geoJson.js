@@ -76,7 +76,7 @@ const geoJson = {
             "geometry": {
                 "type": "Point",
                 "name": "新港(物流)工业园区",
-                "coordinates": [115.24084881873824, 30.105248527327838],
+                "coordinates": [115.20159114510714, 30.16284477036877],
                 "number": "192.69",
                 "img": gongyeyuanqu,
                 "width": 72,
@@ -199,7 +199,7 @@ const shiGeoJson = {
             "geometry": {
                 "type": "Point",
                 "name": "新港(物流)工业园区",
-                "coordinates": [115.24984881873824, 30.095248527327838],
+                "coordinates": [115.20159114510714, 30.16284477036877],
                 "number": "192.69",
                 "img": gongyeyuanqu,
                 "width": 72,
