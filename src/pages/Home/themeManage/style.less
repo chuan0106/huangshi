@@ -1,0 +1,110 @@
+.IframeWarp {
+  width: 100%;
+  height: 100%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-size: 325px 175px;
+  overflow: hidden;
+
+  :global {
+    .anticon-caret-down {
+      &:hover {
+        color: #fff !important;
+      }
+    }
+
+    .ant-slider-mark-text {
+      color: #fff !important;
+    }
+  }
+}
+
+.myIframe1 {
+  position: absolute;
+  width: 1570px;
+  height: 995px;
+  top: 80px;
+  left: 0px;
+  right: 0;
+  margin: 0 auto;
+  z-index: 99;
+}
+
+.titleBox {
+  width: 395px;
+  height: 50px;
+  position: absolute;
+  right: 463px;
+  top: 744px;
+  z-index: 99;
+  color: #fff;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 50px;
+}
+
+// .tableBox {
+//   width: 869px;
+//   height: 50px;
+//   position: absolute;
+//   right: 62px;
+//   top: 799px;
+//   z-index: 99;
+//   color: #fff;
+//   font-weight: 600;
+//   font-size: 16px;
+//   line-height: 50px;
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+.tableBox {
+  width: 872px;
+  height: 250px;
+  position: absolute;
+  right: 55px;
+  top: 795px;
+  z-index: 99;
+  overflow: hidden;
+  padding: 0 10px;
+  //   background: skyblue;
+
+  .tdBox {
+    width: 872px;
+    display: flex;
+    color: #fff;
+    height: 50px;
+  }
+}
+
+.tbBox {
+  width: 872px;
+  height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+
+}
+
+.box {
+  background: rgba(0, 0, 0, 0);
+
+  tr:nth-child(even) {
+    background: rgba(59, 111, 233, 0.2);
+  }
+
+  tr:nth-child(old) {
+    background: rgba(59, 111, 233, 0);
+  }
+}
+
+.trBox {
+  width: 872px;
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+  color: #fff;
+  align-items: center;
+  padding: 0 10px;
+
+}

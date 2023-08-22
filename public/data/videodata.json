@@ -1,0 +1,257 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.07476795316532,
+					30.054380212801103
+				]
+			},
+			"properties": {
+				"id": 1,
+				"icon": "video",
+				"macId": "xxxxS_64f2fbe128dd",
+				"state":1,
+				"position": [
+					120.07476795316532,
+					30.054380212801103
+				],
+				"token": "e3c01f580b1d46ebb7286a02232d7c08"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.07439849716577,
+					30.054370472939762
+				]
+			},
+			"properties": {
+				"id": 2,
+				"icon": "video",
+				"macId": "xxxxS_64f2fbe128dd",
+				"state":1,
+				"position": [
+					120.07439849716577,
+					30.054370472939762
+				],
+				"token": "e3c01f580b1d46ebb7286a02232d7c08"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.07440969280213,
+					30.05405879686594
+				]
+			},
+			"properties": {
+				"id": 3,
+				"icon": "video",
+				"macId": "xxxxS_64f2fbe12836",
+				"state":1,
+				"position": [
+					120.07440969280213,
+					30.05405879686594
+				],
+				"token": "f2d75d636da34a20a75d19577376bcad"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.07369317207576,
+					30.053503621404822
+				]
+			},
+			"properties": {
+				"id": 4,
+				"icon": "video",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":1,
+				"position": [
+					120.07369317207576,
+					30.053503621404822
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.06218109201689,
+					30.05022625680462
+				]
+			},
+			"properties": {
+				"id": 5,
+				"icon": "outvideo",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":2,
+				"position": [
+					120.06218109201689,
+					30.05022625680462
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.0645805743672,
+					30.05302598808177
+				]
+			},
+			"properties": {
+				"id": 6,
+				"icon": "outvideo",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":2,
+				"position":  [
+					120.0645805743672,
+					30.05302598808177
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates":  [
+					120.0636632293427,
+					30.05065503529734
+				]
+			},
+			"properties": {
+				"id": 7,
+				"icon": "outvideo",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":2,
+				"position": [
+					120.0636632293427,
+					30.05065503529734
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.06473239419142,
+					30.0459127935096
+				]
+			},
+			"properties": {
+				"id": 8,
+				"icon": "outvideo",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":2,
+				"position":[
+					120.06473239419142,
+					30.0459127935096
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.06393663000745,
+					30.048031297185574
+				]
+			},
+			"properties": {
+				"id": 9,
+				"icon": "novideo",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":3,
+				"position": [
+					120.06393663000745,
+					30.048031297185574
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.06260577440474,
+					30.051348554410367
+				]
+			},
+			"properties": {
+				"id": 10,
+				"icon": "novideo",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":3,
+				"position":[
+					120.06260577440474,
+					30.051348554410367
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates":  [
+					120.06342764924631,
+					30.045676232476964
+				]
+			},
+			"properties": {
+				"id": 11,
+				"icon": "novideo",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":3,
+				"position": [
+					120.06342764924631,
+					30.045676232476964
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					120.06700906903501,
+					30.046046420239563
+				]
+			},
+			"properties": {
+				"id": 12,
+				"icon": "novideo",
+				"macId": "xxxxS_64f2fbe12169",
+				"state":3,
+				"position": [
+					120.06700906903501,
+					30.046046420239563
+				],
+				"token": "f560429760a04f93ab8bf710cff5cedd"
+			}
+		}
+	]
+}

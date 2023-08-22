@@ -1,0 +1,190 @@
+@login-bg-images: '../../assets/common/login';
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  /*滚动条的背景区域的圆角*/
+  background-color: linear-gradient(357deg,
+      rgba(28, 48, 96, 0.45) 0%,
+      rgba(18, 35, 78, 0.97) 100%);
+  /*滚动条的背景颜色*/
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  /*滚动条的圆角*/
+  // -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  /*滚动条的背景颜色*/
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 2px;
+  // -webkit-box-shadow: inset 0 0 3px #e3e4e6;
+  background: rgba(194, 194, 194, 0.1);
+}
+
+//新风格设置 +++++++++++++++++++++++new+++++++++++++++++++++++++++++++++++++++++++++++
+// 字体大小
+@base-font-size10: 10px;
+@base-font-size11: 11px;
+@base-font-size12: 12px;
+@base-font-size13: 13px;
+@base-font-size14: 14px;
+@base-font-size15: 15px;
+@base-font-size16: 16px;
+@base-font-size18: 18px;
+@base-font-size20: 20px;
+//基础原色
+@primary-color: #1890ff;
+/*全局主色*/
+@dprimary-color: #1890ff;
+/*全局主色*/
+@dbord-color: #e4e7ed;
+/*边框色*/
+@base-shadow-color-1: #414245; //基础阴影色
+@base-shadow-color-2: #000000;
+@dbox-shadow-base-dark: fade(@base-shadow-color-1, 20%); //阴影色
+//hover颜色
+@hover-color: @primary-color;
+@active-color: @primary-color;
+//文本
+@text-white-color: #ffffff;
+@text-black-color: #000000;
+@dtext-font-color: #54595d;
+@dtext-defaut-color: #414245;
+@dtext-second-defaut-color: #606266;
+@dtext-three-defaut-color: #909399;
+@dtext-four-defaut-color: #c0c4cc;
+@dtext-select-color: #1890ff;
+//border
+@base-border-color: @dbord-color;
+@boder-border-dashed-color: @dbord-color;
+@border-active-color: @primary-color;
+//阴影色
+@card-box-shadow-color: fade(@base-shadow-color-1, 20%);
+@drop-down-box-shadow-color: fade(@base-shadow-color-2, 6%);
+//背景颜色
+@dbackground-color: #ffffff;
+@dbackground-color1: #fafafa;
+//line 分割线
+@line-base-color: #f2f6fc;
+//以上为通用设置
+
+//登录相关 ++++++++++
+@login-bg: #4e535c;
+@login-background-color: #f7f8fa;
+@linear-gradient-bg: linear-gradient(180deg, rgba(78, 83, 92, 1) 0%, rgba(214, 223, 239, 1) 100%);
+@login-header-bg: #171f3a;
+@login-footer-border: #979797;
+@login-style-bg: url('@{login-bg-images}/bg_login@2x.png') no-repeat;
+
+@input-success-borderColor: #67c23a; // 输入框正确颜色
+@input-error-borderColor: #f56c6c; // 输入框错误颜色
+@submitButton-background: @primary-color; // 确认提交按钮
+//登录相关 ++++++++++
+
+//header 导航栏
+@header-background-color: #4e535c;
+//button 按钮
+@dbtn-bg-color: @dprimary-color;
+@dbtn-bg-active-color: @dprimary-color;
+//card 卡片
+@card-default-color: @dbackground-color; //默认卡片色
+@card-hover-color: @dbackground-color; //默认卡片色
+@card-border-color: @dbord-color; //卡片边框色
+@card-border-hover-color: @active-color;
+//group 分组组件
+@group-default-color: @dbackground-color;
+@group-hover-color: @dbackground-color;
+@group-border-color: @dbord-color; //卡片边框色
+@group-border-active-color: @primary-color;
+@group-font-color: @dtext-font-color;
+@group-font-active-color: @primary-color;
+// 数据管理左侧分组
+@group-filter-default: @dbackground-color;
+@group-filter-hover: @dbackground-color;
+@group-filter-border: @dbord-color;
+@group-filter-border-active: @hover-color;
+@group-filter-font: @dtext-font-color;
+@group-filter-font-active: @hover-color;
+@group-filter-bg-hover: rgba(235, 243, 255, 1);
+
+//table表格
+@table-th-color: #e3e4e6;
+@table-tr-color: @dbackground-color;
+@table-header-border: 1px solid @dbord-color;
+//modal 模态狂
+@modal-background-color: @dbackground-color;
+@modal-line-color: @dbord-color;
+//select 选择器
+@do-select-arrow: rgba(0, 0, 0, 0.25);
+@do-select-item-border: 1px solid @dbord-color;
+@reply-background: rgba(245, 247, 250, 1); // 回复背景颜色
+@reply-background2: rgba(236, 239, 243, 0.5); // 回复背景颜色
+@reply-color: #303133; // 回复字体颜色
+//dragbox 拖拽盒子
+@dragBox-font-color: @dbackground-color;
+@dragBox-background-base: #ebf3ff;
+@dragBox-background-base2: #ebfaf6;
+@dragBox-background-empty: @dbackground-color;
+@dragAcceptBox-background-base: rgba(224, 237, 255, 1);
+@dragBox-borderColor-base: rgba(220, 223, 230, 1);
+@xs-select-bg: @primary-color;
+@xs-selectClass-bg: @dbackground-color;
+// 版本背景
+@versions-background-base: #626b7d;
+// 引导页
+// 引导页左侧背景
+@guidePage-left-bg: rgba(249, 249, 249, 1);
+@guidePage-left-boxShadow: rgba(229, 229, 229, 1);
+@guidePage-tit-color: #222222;
+@guidePage-tit-color2: #505050;
+@guidePage-tit-color3: #2b2d2f;
+@guidePage-tit-color4: #626262;
+@guidePage-content-color: #515357;
+@guidePage-content-color2: #595959;
+@guidePage-content-color3: #6b6c6e;
+@guidePage-bg1: rgba(253, 253, 253, 1);
+@guidePage-border-color: rgba(240, 240, 240, 1);
+@guidePage-boxShadow: rgba(213, 213, 213, 0.25);
+@guidePage-step-color: #838383;
+@guidePage-stepBox-color: #a8a8a8;
+@guidePage-stepTit-color: #8c8c8c;
+@guidePage-stepTitActive-color: rgba(55, 55, 55, 1);
+@guidePage-stepNum-bg: #448ff7;
+@guidePage-line-color: #979797;
+@guidePage-typeBox-boxShadow: rgba(20, 49, 127, 0.08);
+@guidePage-typeBox-boxShadow-active: rgba(173, 173, 173, 0.56);
+//build chart
+@build-chart-header: @dbackground-color;
+@build-chart-header-border: #d9d9d9;
+@build-chart-action-bg: @dbackground-color;
+@build-chart-action-font-color: @hover-color;
+@build-chart-font-color: @dtext-three-defaut-color;
+@build-chart-des-color: @dtext-second-defaut-color;
+@build-chart-444-color: #444;
+@build-chart-widgetViewWarp-color: @dbackground-color;
+@build-chart-widgetView-color: #eff0f4;
+@build-chart-left-background: @dbackground-color1;
+//steps
+@do-steps-bg: @dtext-second-defaut-color;
+@do-steps-line-bg: @dtext-second-defaut-color;
+@do-steps-border: @dtext-second-defaut-color;
+@do-steps-color: @dtext-second-defaut-color;
+//指标模块+++++++++++++++++++++++
+@indexGroup-default-color: @dbackground-color;
+@tree-selectBackground-color: #afc7de;
+@input-disabled-bgColor: #f5f5f5;
+@input-disabled-borderColor: #313861;
+@input-disabled-fontColor: rgba(0, 0, 0, 0.25);
+@button-disabled-fontColor: rgba(0, 0, 0, 0.25);

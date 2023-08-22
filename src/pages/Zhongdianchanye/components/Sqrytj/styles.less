@@ -1,0 +1,65 @@
+.normal {
+    height: 131px;
+    width: 288px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 275px;
+    left: 29px;
+}
+
+.normal::-webkit-scrollbar {
+    width: 0px; //y轴滚动条粗细
+    height: 0px; //x轴滚动条粗细
+    border-bottom: 1px solid #7b7b7b;
+}
+
+//滚动条里面的小方块，能上下左右移动（取决于是垂直滚动条还是水平滚动条）
+.normal::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+    background: #949494;
+    margin-bottom: 10px;
+}
+
+//滚动条的轨道（里面装有thumb）滚动槽
+.normal::-webkit-scrollbar-track {
+    -webkit-box-shadow: 0;
+    border-radius: 0;
+    background: #4d4d4b; //滚动槽背景色
+    border-radius: 10px; //滚动条边框半径设置
+}
+
+
+.centerBox {
+    height: auto;
+    width: 288px;
+    background-image: url('../../../../assets/window/列表装饰.png');
+    //滚动条整体部分
+
+}
+
+
+
+.content {
+    width: 288px;
+    height: 44px;
+    line-height: 44px;
+    // border: 1px solid #fff;
+}
+
+.modal_ {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    z-index: 9;
+}
+
+.myIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

@@ -1,0 +1,24 @@
+.normal {
+  position: fixed;
+  top: 60px;
+  z-index: 2000;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  pointer-events: all;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 8px;
+  animation-name: MessageMoveOut;
+  animation-duration: 1s;
+}
+
+@keyframes MessageMoveOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

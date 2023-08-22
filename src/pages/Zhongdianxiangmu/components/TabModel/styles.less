@@ -1,0 +1,113 @@
+.normal {
+  position: absolute;
+  left: 2450px;
+  top: 280px;
+  width: 1780px;
+  height: 1040px;
+  background: url(./img/bg.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 65px 82px 10px 76px;
+  pointer-events: auto;
+  .close {
+    position: absolute;
+    right: 54px;
+    top: 0px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .tab {
+    width: 1622px;
+    height: 66px;
+    background: url(./img/tab_bg.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    cursor: pointer;
+    .tablist {
+      width: 270px;
+      height: 66px;
+      flex-grow: 1;
+      font-size: 30px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 66px;
+      &:nth-child(1) {
+        border-radius: 16px 1px 1px 16px;
+      }
+      &:nth-last-child(1) {
+        border-radius: 1px 16px 16px 1px;
+      }
+    }
+    .activetab {
+      background: #3d7ec6 !important;
+    }
+  }
+  .table {
+    margin-top: 20px;
+    :global {
+      .ant-table-thead > tr > th {
+        background: rgba(36, 101, 198, 0.7) !important;
+        border-bottom: none !important;
+      }
+      .ant-table-tbody > tr > td {
+        border-bottom: none !important;
+      }
+      .ant-table-tbody > tr .ant-table-row:hover > td {
+        background: #1f478c;
+      }
+      .ant-pagination-prev .ant-pagination-item-link,
+      .ant-pagination-next .ant-pagination-item-link {
+        background-color: transparent !important;
+        color: #fff;
+      }
+      .ant-pagination-item {
+        background-color: transparent !important;
+        color: #fff;
+      }
+      .ant-pagination-item-active {
+        background-color: transparent !important;
+        color: #fff;
+      }
+      .ant-pagination-item a {
+        color: #fff;
+      }
+      .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+        background-color: #225fba !important;
+      }
+      .ant-table-body .ant-table-row-hover {
+        background: #225fba !important;
+      }
+      .ant-table-body .ant-table-row-hover > td {
+        background: #225fba !important;
+      }
+    }
+  }
+  .tabHead {
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .drak_row {
+    background: #1f478c;
+    opacity: 0.7;
+  }
+  .light_row {
+    background: #163872;
+    opacity: 0.7;
+  }
+  .text {
+    display: inline-block;
+    vertical-align: inherit;
+    margin-right: 30px;
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .text1 {
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
