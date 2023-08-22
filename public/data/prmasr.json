@@ -1,0 +1,212 @@
+{
+  "catalog": "ce3382a0ae80407294b507a52a897cf4",
+  "sourceType": 7,
+  "features": "c3dbc0ae649b4f56a0ae0377671f757b",
+  "dimension": [
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0000",
+      "index": 0,
+      "alias": "eid",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0000"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0001",
+      "index": 1,
+      "alias": "name",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0001"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0002",
+      "index": 2,
+      "alias": "credit_no",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0002"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0003",
+      "index": 3,
+      "alias": "org_no",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0003"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0004",
+      "index": 4,
+      "alias": "econ_kind",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0004"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0005",
+      "index": 5,
+      "alias": "oper_name",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0005"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0006",
+      "index": 6,
+      "alias": "regist_capi",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0006"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0007",
+      "index": 7,
+      "alias": "belong_org",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0007"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0008",
+      "index": 8,
+      "alias": "scope",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0008"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0009",
+      "index": 9,
+      "alias": "logo_url",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0009"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0010",
+      "index": 10,
+      "alias": "address",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0010"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0011",
+      "index": 11,
+      "alias": "postcode",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0011"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0012",
+      "index": 12,
+      "alias": "value",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0012"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0013",
+      "index": 13,
+      "alias": "value1",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0013"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0014",
+      "index": 14,
+      "alias": "web_name",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0014"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0015",
+      "index": 15,
+      "alias": "industry_code",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0015"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0016",
+      "index": 16,
+      "alias": "year",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0016"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0017",
+      "index": 17,
+      "alias": "long",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0017"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "f0018",
+      "index": 18,
+      "alias": "lat",
+      "anotherName": null,
+      "type": "String",
+      "key": "f0018"
+    },
+    {
+      "unit": null,
+      "des": null,
+      "name": "geom",
+      "index": 19,
+      "alias": "geom",
+      "anotherName": null,
+      "type": "Point",
+      "key": "geom"
+    }
+  ],
+  "where": {
+    "mode": 1,
+    "conditions": []
+  },
+  "search_type": 2
+}
