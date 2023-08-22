@@ -17,8 +17,7 @@ import huangshi from '@/assets/huangshi/common/huangshi.png';
 // import North from '@/components/North';
 // import { geoJson } from './geoJson'
 import { geoJson, shiGeoJson, quanshengGeoJson } from '@/utils/publickPage/geoJson';
-function mapStateToProps ({ globalModel, globalMapModel, zhongdianqiyeModal })
-{
+function mapStateToProps ({ globalModel, globalMapModel, zhongdianqiyeModal }) {
     return {
         globalModel: globalModel,
         globalMapModel: globalMapModel,
@@ -26,40 +25,30 @@ function mapStateToProps ({ globalModel, globalMapModel, zhongdianqiyeModal })
     };
 }
 @connect(mapStateToProps)
-class MapModel extends React.Component
-{
-    constructor(props)
-    {
+class MapModel extends React.Component {
+    constructor(props) {
         super(props);
     }
     //初次渲染完成之后调用
-    componentDidMount ()
-    {
-        document.oncontextmenu = function (e)
-        {
+    componentDidMount () {
+        document.oncontextmenu = function (e) {
             e.preventDefault();
         };
     }
     //初次加载完成的回调函数
-    initMapCallback = event =>
-    {
+    initMapCallback = event => {
         let { dispatch, initCallback } = this.props;
         let mapObj = null;
-        if (event)
-        {
+        if (event) {
             mapObj = event.getMap();
             dispatch({ type: 'globalMapModel/setMapObj', payload: mapObj });
-            if (initCallback && mapObj)
-            {
-                if (mapObj.loaded())
-                {
-                    mapObj.on('load', () =>
-                    {
+            if (initCallback && mapObj) {
+                if (mapObj.loaded()) {
+                    mapObj.on('load', () => {
                         // initCallback(mapObj);
                         this.onLoadFun(mapObj, initCallback);
                     });
-                } else
-                {
+                } else {
                     this.onLoadFun(mapObj, initCallback);
                     // initCallback(mapObj);
                 }
@@ -67,8 +56,7 @@ class MapModel extends React.Component
         }
     };
     //地图对象实例化之后加载对应方法
-    onLoadFun = (mapObj, initCallback) =>
-    {
+    onLoadFun = (mapObj, initCallback) => {
         const viewport = new WebMercatorViewport({
             width: window.innerWidth,
             height: window.innerHeight,
@@ -83,15 +71,12 @@ class MapModel extends React.Component
             data: shiGeoJson.features,
             pickable: true,
             billboard: true,
-            getIcon: d =>
-            {
+            getIcon: d => {
                 let obj = {
                     url: d.geometry.img,
                     width: d.geometry.width,
                     height: d.geometry.height,
-                    anchorX: (d.geometry.name === '开发区·铁山区'
-                        ? d.geometry.width * 0.9
-                        : d.geometry.width / 2),
+                    anchorX: d.geometry.width / 2,
                     anchorY: d.geometry.height,
                 };
                 return obj;
@@ -100,16 +85,14 @@ class MapModel extends React.Component
             sizeMaxPixels: 150,
             getSize: d => 1,
             sizeUnits: 'meters',
-            getPosition: d =>
-            {
+            getPosition: d => {
                 return d.geometry.coordinates;
             },
             //   getPixelOffset:(d) => {
             //     return [0, 10]
             //   }
         });
-        if (mapObj)
-        {
+        if (mapObj) {
             this.props.dispatch({
                 type: 'globalMapModel/setDeckLayerArr',
                 // payload: [...this.props.globalMapModel.deckLayerArr, layerobj],
@@ -118,8 +101,7 @@ class MapModel extends React.Component
         }
 
         // console.log(mapObj,'mapObjmapObjmapObj')
-        mapObj.on('styledata', function ()
-        {
+        mapObj.on('styledata', function () {
             let option = {
                 coordinates: [
                     [114.526517, 30.332979],
@@ -133,12 +115,10 @@ class MapModel extends React.Component
             imageLayer.addMapLayer();
         });
 
-        mapObj.on('Click', e =>
-        {
+        mapObj.on('Click', e => {
             console.log(e, 'dsafadasdw');
         });
-        mapObj.on('move', function (e)
-        {
+        mapObj.on('move', function (e) {
             console.log(e, 'mapdsacclick');
             // console.log(e.target._easeOptions, 'eeqw3213');
             // const newVive = {
@@ -216,13 +196,11 @@ class MapModel extends React.Component
         //   }
         // });
 
-        if (initCallback)
-        {
+        if (initCallback) {
             initCallback(mapObj);
         }
     };
-    getIconLayer (mapObj)
-    {
+    getIconLayer (mapObj) {
         const { zhongdianqiyePoint } = this.props;
         // mapObj.flyTo({ zoom: 18, center: [115.09275817871094, 30.21311378479004], speed: 2.4 },);
         let geoJson = {
@@ -240,16 +218,13 @@ class MapModel extends React.Component
         };
     }
     //滑动
-    _onViewStateChange ({ viewState })
-    {
+    _onViewStateChange ({ viewState }) {
         // 地图限制层级
-        if (viewState.zoom <= 9.706531408747953 && viewState.zoom >= 8.462354657997096)
-        {
+        if (viewState.zoom <= 9.706531408747953 && viewState.zoom >= 8.462354657997096) {
             let { activeLayerObj } = this.props.globalMapModel;
             console.log(activeLayerObj, 'activeLayerObjactiveLayerObjactiveLayerObj');
             let { x, y, object, lngLat } = activeLayerObj;
-            if (x || y || object)
-            {
+            if (x || y || object) {
                 let viewObj = new WebMercatorViewport(viewState);
                 console.log(viewObj, 'viewObjviewObjviewObjviewObj');
                 let arr = viewObj.project(lngLat);
@@ -318,8 +293,7 @@ class MapModel extends React.Component
     // };
     //点击调用的函Click数
     //滑动点击提示框
-    onClickFun = data =>
-    {
+    onClickFun = data => {
         console.log(data, 'dsadasfwewqedas');
         console.log(data, 'dsadawewqdacza');
         let { object, layer } = data;
@@ -330,15 +304,13 @@ class MapModel extends React.Component
             object: null,
             layer: layer,
         };
-        if (object)
-        {
+        if (object) {
             let { viewState } = this.props.globalMapModel;
             let viewObj = new WebMercatorViewport(viewState);
             let { geometry } = object;
             let { coordinates } = geometry;
             let { type } = geometry;
-            if (type === 'Point' || type === 'MultiPoint')
-            {
+            if (type === 'Point' || type === 'MultiPoint') {
                 let arr = viewObj.project(coordinates);
                 obj = {
                     lngLat: coordinates,
@@ -354,8 +326,7 @@ class MapModel extends React.Component
                 type === 'MultiLineString' ||
                 type === 'Polygon' ||
                 type === 'MultiPolygon'
-            )
-            {
+            ) {
                 // let { x, y, lngLat } = data;
                 // console.log(obj, 'obj2')
                 // obj = {
@@ -365,22 +336,19 @@ class MapModel extends React.Component
                 //     object: object
                 // }
             }
-        } else
-        {
+        } else {
             // 具体做什么的我也不太清楚 但是有弹窗是点击 弹窗回移动
             // this.props.dispatch({ type: 'globalMapModel/setactiveLayerArr', payload: [] });
             // this.props.dispatch({ type: 'globalMapModel/setActiveLayerObj', payload: obj });
         }
     };
-    northCallBack = viewState =>
-    {
+    northCallBack = viewState => {
         this.props.dispatch({
             type: 'globalMapModel/setViewState',
             payload: viewState,
         });
     };
-    render ()
-    {
+    render () {
         const {
             viewState,
             deckLayerArr,
