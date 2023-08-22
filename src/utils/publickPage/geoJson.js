@@ -259,19 +259,19 @@ const shiGeoJson = {
         //         "height": 101,
         //     }
         // },
-        {
-            "type": "Feature",
-            "properties": '',
-            "geometry": {
-                "type": "Point",
-                "name": "开发区·铁山区",
-                "coordinates": [114.89687834986758, 30.198957203188776],
-                "number": "192.69",
-                "img": tieshanqu,
-                "width": 242,
-                "height": 101,
-            }
-        },
+        // {
+        //     "type": "Feature",
+        //     "properties": '',
+        //     "geometry": {
+        //         "type": "Point",
+        //         "name": "开发区·铁山区",
+        //         "coordinates": [114.89687834986758, 30.198957203188776],
+        //         "number": "192.69",
+        //         "img": tieshanqu,
+        //         "width": 242,
+        //         "height": 101,
+        //     }
+        // },
         {
             "type": "Feature",
             "properties": '',
