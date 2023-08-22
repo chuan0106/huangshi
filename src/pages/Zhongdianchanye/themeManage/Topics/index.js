@@ -252,7 +252,8 @@ const dataSourceRight = [
     },
 
 ];
-const Index = ({ }) => {
+const Index = ({ }) =>
+{
     // 筛选字段 九大主导产业名称
     const [industrialName, setIndustrialName] = useState('')
     const [tableDataSource, setTableDataSource] = useState([])
@@ -264,7 +265,8 @@ const Index = ({ }) => {
     let REQUEST_url = "http://58.19.254.210:7000/hubble/common/v1/search?catalog=a6f5bb45afb84ee2a54188053412662e&features=f187434eea12494590fa655c64200896&max_feature=10000&search_type=1"
 
     // 获取左侧表格的数据
-    useEffect(() => {
+    useEffect(() =>
+    {
         const newData = {
             ...left, where: {
                 "mode": 1,
@@ -296,7 +298,8 @@ const Index = ({ }) => {
         fetchData()  // 请求网络数据
     }, [industrialName])
     // 获取右侧表格的数据
-    useEffect(() => {
+    useEffect(() =>
+    {
         const newData = {
             ...right, where: {
                 "mode": 1,
@@ -324,16 +327,19 @@ const Index = ({ }) => {
             }
         })
     }, [industrialName])
-    const firstGetData = (dataArr) => {
+    const firstGetData = (dataArr) =>
+    {
         setTableDataLeft(dataArr)
     }
-    const firstGetData2 = (dataArr) => {
+    const firstGetData2 = (dataArr) =>
+    {
         setTableDataRight(dataArr)
     }
 
 
 
-    const fetchData = () => {
+    const fetchData = () =>
+    {
         // 暂时使用本地数据 数据进来再替换
         // dispatch({
         //     type: 'zhongdianchanyeModel/getZhongdianchanyeTable',
@@ -356,15 +362,18 @@ const Index = ({ }) => {
         //         console.warn(error);
         //     })
     }
-    const getData = (data) => {
+    const getData = (data) =>
+    {
         setTableDataSource(data)
     }
 
-    useEffect(() => {
+    useEffect(() =>
+    {
         setTableDataSource(dataSource)
     }, [dataSource])
     // 修改弹窗数据
-    const modalHandler = (dataObj) => {
+    const modalHandler = (dataObj) =>
+    {
         setIsModal(dataObj)
     }
     const columns = [
@@ -453,18 +462,21 @@ const Index = ({ }) => {
 
 
     // 表格的按钮
-    const examine = (_, record) => {
+    const examine = (_, record) =>
+    {
         // 弹出窗需要的数据 暂时模拟
         setIsModal(true)
     }
 
     // 根据左侧重点产业的点击 展示相应表格数据
-    const menuHandler = (tabArr) => {
+    const menuHandler = (tabArr) =>
+    {
         setTableDataSource(tabArr)
     }
 
     // 修改产业名称
-    const industrialHandler = (nameStr) => {
+    const industrialHandler = (nameStr) =>
+    {
         setIndustrialName(nameStr)
     }
     return (
@@ -479,7 +491,8 @@ const Index = ({ }) => {
     );
 };
 
-const mapStateToProps = ({ zhongdianchanyeModel }) => {
+const mapStateToProps = ({ zhongdianchanyeModel }) =>
+{
     return {
         zhongdianchanyeModel: zhongdianchanyeModel
     };

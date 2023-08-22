@@ -281,8 +281,7 @@ const titleArr = [
         name: '全省市州情况', id: 2, children: CoreMenu1
     },
 ]
-const Index = (props) =>
-{
+const Index = (props) => {
 
     // 顶部导航栏
     const [active, setActive] = useState(titleArr[0])
@@ -294,19 +293,16 @@ const Index = (props) =>
 
 
     // 切换本市与全省 清除点位数据
-    useEffect(() =>
-    {
+    useEffect(() => {
         let { deckLayerArr, mapObj } = props.globalMapModel;
 
-        if (active.id === 2)
-        {
+        if (active.id === 2) {
             let layerobj = new IconLayer({
                 id: '全省-icon',
                 data: quanshengGeoJson.features,
                 pickable: true,
                 billboard: true,
-                getIcon: d =>
-                {
+                getIcon: d => {
                     let obj = {
                         url: d.geometry.img,
                         width: d.geometry.width,
@@ -322,16 +318,14 @@ const Index = (props) =>
                 sizeMaxPixels: 150,
                 getSize: d => 1,
                 sizeUnits: 'meters',
-                getPosition: d =>
-                {
+                getPosition: d => {
                     return d.geometry.coordinates;
                 },
                 //   getPixelOffset:(d) => {
                 //     return [0, 10]
                 //   }
             });
-            if (mapObj)
-            {
+            if (mapObj) {
                 dispatch({
                     type: 'globalMapModel/setDeckLayerArr',
                     // payload: [...deckLayerArr, layerobj],
@@ -340,15 +334,13 @@ const Index = (props) =>
                 });
             }
 
-        } else
-        {
+        } else {
             let layerobj = new IconLayer({
                 id: '市区-icon',
                 data: shiGeoJson.features,
                 pickable: true,
                 billboard: true,
-                getIcon: d =>
-                {
+                getIcon: d => {
                     let obj = {
                         url: d.geometry.img,
                         width: d.geometry.width,
@@ -364,16 +356,14 @@ const Index = (props) =>
                 sizeMaxPixels: 150,
                 getSize: d => 1,
                 sizeUnits: 'meters',
-                getPosition: d =>
-                {
+                getPosition: d => {
                     return d.geometry.coordinates;
                 },
                 //   getPixelOffset:(d) => {
                 //     return [0, 10]
                 //   }
             });
-            if (mapObj)
-            {
+            if (mapObj) {
                 dispatch({
                     type: 'globalMapModel/setDeckLayerArr',
                     // payload: [...deckLayerArr, layerobj],
@@ -383,8 +373,7 @@ const Index = (props) =>
             }
         }
 
-        return () =>
-        {
+        return () => {
             dispatch({
                 type: 'globalMapModel/setDeckLayerArr',
                 payload: []
@@ -392,11 +381,9 @@ const Index = (props) =>
         }
     }, [active])
     // 首次加载请求 全省-进规企业表格
-    useEffect(() =>
-    {
+    useEffect(() => {
         const { id } = active
-        if (id == 1)
-        {
+        if (id == 1) {
             props.dispatch({
                 type: 'homeModel/getgongyezongchanzhi',
                 payload: {
@@ -409,8 +396,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (id == 2)
-        {
+        if (id == 2) {
             // props.dispatch({
             //     type: 'homeModel/getFirstTableData',
             //     payload: {
@@ -440,15 +426,12 @@ const Index = (props) =>
         setListActive(active.children[0])
     }, [active])
 
-    useEffect(() =>
-    {
+    useEffect(() => {
         // setListActive(1)
     }, [active])
-    const firstGetData = (data) =>
-    {
+    const firstGetData = (data) => {
         let dataArr = []
-        for (let i in data)
-        {
+        for (let i in data) {
             let dataParams = {
                 duration: data[i].f0000,
                 grade: data[i].f0001,
@@ -460,11 +443,9 @@ const Index = (props) =>
         setTableDataSource(dataArr)
     }
 
-    const getData = (data) =>
-    {
+    const getData = (data) => {
         let dataArr = []
-        for (let i in data)
-        {
+        for (let i in data) {
             let dataParams = {
                 duration: data[i].f0000,
                 grade: data[i].f0001,
@@ -478,11 +459,9 @@ const Index = (props) =>
     }
 
 
-    const getdatatwo = (data) =>
-    {
+    const getdatatwo = (data) => {
         let dataArry = [];
-        for (let i in data)
-        {
+        for (let i in data) {
             let dataparams = {
                 name: data[i].f0006,
                 grade: data[i].f0005,
@@ -495,13 +474,11 @@ const Index = (props) =>
         setTableDataSource(dataArry)
     }
     // 顶部导航栏切换
-    const titleHandler = (itemObj) =>
-    {
+    const titleHandler = (itemObj) => {
         props.modalHandler(null)
 
         const { id } = itemObj;
-        if (itemObj.name === '县市区工业')
-        {
+        if (itemObj.name === '县市区工业') {
             let option = {
                 // coordinates: [
                 //     [114.50, 30.35],
@@ -522,8 +499,7 @@ const Index = (props) =>
             let { mapObj } = props.globalMapModel
             let newimglayer = new ImageLayer(mapObj, 'imglayer', option)
             newimglayer.addMapLayer()
-        } else if (itemObj.name === '全省市州情况')
-        {
+        } else if (itemObj.name === '全省市州情况') {
             let option = {
                 coordinates: [
                     [114.526517, 30.332979],
@@ -539,8 +515,7 @@ const Index = (props) =>
             newimglayer.addMapLayer()
             // mapObj.flyTo({ zoom: 6.818177907246239, center: [113.09275817871094, 31.21311378479004] });
         }
-        if (id === 1)
-        {
+        if (id === 1) {
             props.dispatch({
                 type: 'homeModel/getgongyezongchanzhi',
                 payload: {
@@ -553,8 +528,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (id === 2)
-        {
+        if (id === 2) {
             props.dispatch({
                 type: 'homeModel/getFirstTableData',
                 payload: {
@@ -574,19 +548,16 @@ const Index = (props) =>
         setActive(itemObj)
     }
     // 获取工业总产值的数据
-    const getDataThree = (data) =>
-    {
+    const getDataThree = (data) => {
 
         setTableDataSource(data)
     }
     // 底部导航栏切换
-    const coreHandler = (itemObj) =>
-    {
+    const coreHandler = (itemObj) => {
         // ! 重点注意 这里其实可以不用写if的 为了以防万一后面改动页面会有变化
         setListActive(itemObj)
         const { difference } = itemObj
-        if (difference === '全省-进规企业')
-        {
+        if (difference === '全省-进规企业') {
             props.dispatch({
                 type: 'homeModel/getjinguiqiye',
                 payload: {
@@ -599,8 +570,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (difference === '全省-工业增加值增速')
-        {
+        if (difference === '全省-工业增加值增速') {
             props.dispatch({
                 type: 'homeModel/getgongyezengjiazhizengsu1',
                 payload: {
@@ -613,8 +583,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (difference === '全省-工业投资增速')
-        {
+        if (difference === '全省-工业投资增速') {
             props.dispatch({
                 type: 'homeModel/getquanshenggongyetouzizengsu1',
                 payload: {
@@ -627,8 +596,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (difference === '全省-工业技改投资增速')
-        {
+        if (difference === '全省-工业技改投资增速') {
             props.dispatch({
                 type: 'homeModel/getgongyejigaitouzi1',
                 payload: {
@@ -641,8 +609,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (difference === '区县-工业总产值')
-        {
+        if (difference === '区县-工业总产值') {
             props.dispatch({
                 type: 'homeModel/getgongyezongchanzhi',
                 payload: {
@@ -655,8 +622,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (difference === '区县-工业增加值增速')
-        {
+        if (difference === '区县-工业增加值增速') {
             props.dispatch({
                 type: 'homeModel/getgongyezengjiazhizengsu2',
                 payload: {
@@ -669,8 +635,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (difference === '区县-工业投资增速')
-        {
+        if (difference === '区县-工业投资增速') {
             props.dispatch({
                 type: 'homeModel/getgongyezengjiazhizengsu2',
                 payload: {
@@ -683,8 +648,7 @@ const Index = (props) =>
                 }
             })
         }
-        if (difference === '区县-工业技改投资增速')
-        {
+        if (difference === '区县-工业技改投资增速') {
             props.dispatch({
                 type: 'homeModel/getgongyejigaitouzi2',
                 payload: {
@@ -701,13 +665,13 @@ const Index = (props) =>
     console.log(active.id, 'dsd props.globalMapModel?.mapObj');
     return (
         <Fragment>
-            <div className={styles.core}>
+            {/* <div className={styles.core}>
                 {titleArr.map(item => (
                     <div key={item.id} onClick={() => { titleHandler(item) }} style={{ color: active.id === item.id ? '#fff' : 'rgba(148,155,170)' }} className={styles.title}>{item.name}</div>
                 ))}
-            </div>
+            </div> */}
             {/* {active.name === '全市地区概况' && ( */}
-            <div className={styles.menu}>
+            {/* <div className={styles.menu}>
                 {active?.children?.map(item => (
                     (
                         <div key={item.id} className={styles.menuList}>
@@ -716,7 +680,7 @@ const Index = (props) =>
                         </div>
                     )
                 ))}
-            </div>
+            </div> */}
             {props?.globalMapModel?.mapObj && (
                 <Fragment>
                     {active.id === 1 && <NewIconLayer modalHandler={props.modalHandler} />}
@@ -727,53 +691,18 @@ const Index = (props) =>
             {/* <div className={active.id == 1 ? styles.mapimg : styles.mapimgtwo}>
                 <img src={imgurl} />
             </div> */}
-            <div className={styles.tableWarp}>
+            {/* <div className={styles.tableWarp}>
                 <div className={styles.titleWarp}>
                     <p className={styles.title}>{active.id === 1 ? '县市区比较' : '市州比较'} </p>
                 </div>
 
-                {/* <div className={styles.tabSelectLeft} id={"tabSelectLeft"}>
-                    <Select defaultValue="2023年"
-                        style={{ width: 120, height: 60 }}
-                        getPopupContainer={() => { return window.document.getElementById("tabSelectLeft") }}
-                        options={[
-                            { value: '2023年', label: '2023年' },
-                            { value: '2022年', label: '2022年' },
-                            { value: '2021年', label: '2021年' },
-                            { value: '2020年', label: '2020年' },
-                            { value: '2019年', label: '2019年' },
-
-                        ]} />
-                </div>
-                <div className={styles.tabSelectRight} id={"tabSelectRight"}>
-                    <Select defaultValue="月份"
-                        style={{ width: 120, height: 60 }}
-                        // onChange={monthHandler}
-                        getPopupContainer={() => { return window.document.getElementById("tabSelectRight") }}
-                        options={[
-                            { value: '1月', label: '1月' },
-                            { value: '2月', label: '2月' },
-                            { value: '3月', label: '3月' },
-                            { value: '4月', label: '4月' },
-                            { value: '5月', label: '5月' },
-                            { value: '6月', label: '6月' },
-                            { value: '7月', label: '7月' },
-                            { value: '8月', label: '8月' },
-                            { value: '9月', label: '9月' },
-                            { value: '10月', label: '10月' },
-                            { value: '11月', label: '11月' },
-                            { value: '12月', label: '12月' },
-                        ]} />
-                </div> */}
-
                 {tableDataSource?.length > 1 && <Table dataSource={tableDataSource} columns={listActive?.columns} isScroll={true} rowClassName={{ oddStyle: { color: '#fff', background: '#103066', fontSize: '14px' }, evenStyle: { color: '#FFF2D6', background: '#0D2954', fontSize: '14px' } }} />}
-            </div>
+            </div> */}
         </Fragment>
 
     );
 };
-function mapStateToProps ({ homeModel, globalMapModel })
-{
+function mapStateToProps ({ homeModel, globalMapModel }) {
     return {
         homeModel: homeModel,
         globalMapModel: globalMapModel
