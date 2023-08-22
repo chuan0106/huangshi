@@ -127,8 +127,6 @@ const Index = ({ zhongdianxiangmuModel, ModalFun, modalData, menuNameHandler, is
         let startingTime = 30
         let initScroll = menuWarpRef.current
         let scrollContainer = scrollContainerRef.current
-
-
         if (isScroll === 0)
         {
             timer = setInterval(() =>
