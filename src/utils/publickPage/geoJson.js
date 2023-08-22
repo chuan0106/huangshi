@@ -79,8 +79,8 @@ const geoJson = {
                 "coordinates": [115.24084881873824, 30.105248527327838],
                 "number": "192.69",
                 "img": gongyeyuanqu,
-                "width": 350,
-                "height": 97,
+                "width": 72,
+                "height": 49,
             }
         },
         {
